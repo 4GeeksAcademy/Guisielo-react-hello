@@ -2,7 +2,7 @@ export const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-dark bg-dark">
-                <div className="container-fluid">
+                <div className="container">
                     <a className="navbar-brand" href="#">Start Bootstrap</a>
                     <div className="d-flex">
                         <ul className="navbar-nav flex-row gap-3">
