@@ -15,11 +15,19 @@ const Home = () => {
 			<Navbar/>
 			<div class="container">
 				<Jumbotron/>
-				<div className = "d-flex gap-3  justify-content-between flex-wrap p-3">
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
+				<div className = "row g-4 p-3">
+					<div className="col-lg-3 col-md-6 col-12">
+            			<Card />
+        			</div>
+					<div className="col-lg-3 col-md-6 col-12">
+            			<Card />
+        			</div>
+					<div className="col-lg-3 col-md-6 col-12">
+            			<Card />
+        			</div>
+					<div className="col-lg-3 col-md-6 col-12">
+            			<Card />
+        			</div>
 				</div>
 			</div>
 			<Footer/>
