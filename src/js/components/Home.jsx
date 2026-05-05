@@ -10,24 +10,25 @@ import { Footer } from "./Footer";
 
 //create your first component
 const Home = () => {
+	const cardImages = [
+		{url:"https://images.pexels.com/photos/10967612/pexels-photo-10967612.jpeg",title:"Lindas Flores"},
+		{url:"https://images.pexels.com/photos/10967612/pexels-photo-10967612.jpeg",title:"Lindas Flores"},
+		{url:"https://images.pexels.com/photos/10967612/pexels-photo-10967612.jpeg",title:"Lindas Flores"},
+		{url:"https://images.pexels.com/photos/10967612/pexels-photo-10967612.jpeg",title:"Lindas Flores"}
+	];
 	return (
 		<div className="text-center">
 			<Navbar/>
-			<div class="container">
+			<div className="container">
 				<Jumbotron/>
-				<div className = "row g-4 p-3">
-					<div className="col-lg-3 col-md-6 col-12">
-            			<Card />
-        			</div>
-					<div className="col-lg-3 col-md-6 col-12">
-            			<Card />
-        			</div>
-					<div className="col-lg-3 col-md-6 col-12">
-            			<Card />
-        			</div>
-					<div className="col-lg-3 col-md-6 col-12">
-            			<Card />
-        			</div>
+				<div className = "row g-4 p-3">{
+						cardImages.map((img,index) => {
+							return (
+								<div className="col-lg-3 col-md-6 col-12">
+									<Card key={index} url={img.url} title={img.title} />
+								</div>
+							);
+						})}					
 				</div>
 			</div>
 			<Footer/>
